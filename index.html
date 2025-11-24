@@ -98,32 +98,6 @@
                 </li>
             </ul>
 
-            <!-- Audio + Video examples (controls + transcript to satisfy checklist) -->
-            <div class="media-examples">
-                <h3>Audio (with controls)</h3>
-                <audio controls preload="none" aria-describedby="audioTranscript">
-                    <source src="media/readable-journal-intro.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <div id="audioTranscript" class="transcript">
-                    <h4>Audio transcript</h4>
-                    <p>This is the transcript text of the audio introduction. (Short example — replace with real text for your upload.)</p>
-                </div>
-
-                <h3>Video (with caption track and transcript)</h3>
-                <video controls preload="none" width="640" height="360" aria-describedby="videoTranscript">
-                    <source src="media/readable-journal-demo.mp4" type="video/mp4">
-                    <!-- Placeholder VTT: provide real file when available -->
-                    <track kind="captions" srclang="en" label="English captions" default src="media/readable-journal-captions.vtt">
-                    Your browser does not support the video element.
-                </video>
-                <div id="videoTranscript" class="transcript">
-                    <h4>Video transcript</h4>
-                    <p>This is the transcript text of the video. (Provide a full transcript file for grader/review.)</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Example table to satisfy checklist -->
         <section id="examples" aria-labelledby="examples-heading" class="panel">
             <h2 id="examples-heading">Examples & Links</h2>
@@ -213,22 +187,6 @@
         </div>
     </footer>
 
-    <!-- Notes for instructor / checklist mapping (visible for peer review) -->
-    <aside class="audit-notes" aria-label="Self-audit notes">
-        <h2>Self-Audit Notes (high level)</h2>
-        <ul>
-            <li>H1 used and contains keyword "Readable Journal".</li>
-            <li>Headings organized: H1, multiple H2/H3 sections applied.</li>
-            <li>Base font-size 18px, line-height 1.5. Large headings ≥ 24px.</li>
-            <li>Alt text and filenames include keyword (placeholder images used).</li>
-            <li>Contrast and focus styles provided. Links have clear anchor text.</li>
-            <li>At least 3 external links included. Footer links and social icon included.</li>
-            <li>Form present with client-side validation and success message (local demo).</li>
-            <li>Images, audio, and video include captions/transcripts and controls.</li>
-            <li>Navigation intuitive and keyboard accessible; skip link included.</li>
-            <li>Single external CSS file `styles.css` controls styling across the site.</li>
-        </ul>
-    </aside>
 
 <script>
     // small JS to handle journal entries and form validation
