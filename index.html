@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Readable Journal — A writing and journaling platform</title>
   <meta name="description" content="Readable Journal: an accessible writing and journaling platform with clear typography, keyboard navigation, and privacy-first features." />
@@ -11,7 +11,7 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://example.com/" />
 
-  <!-- JSON-LD (basic structured data for SEO) -->
+  <!-- Basic structured data for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,15 +24,14 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <!-- Skip link -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header" role="banner" id="header">
+  <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="#home" class="logo" aria-label="Readable Journal home">
-        <img src="img/logo-readable-journal.svg" alt="Readable Journal logo" width="120" height="40">
+        <img src="/mnt/data/edd082be-1db5-46f7-8960-cd6aa5507708.png"
+             alt="Readable Journal logo — stylized text logo" width="140" height="46">
       </a>
 
       <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
@@ -52,101 +51,120 @@
   </header>
 
   <main id="main-content" tabindex="-1" role="main">
-    <!-- HOME (page 1) -->
-    <section id="home" class="hero panel" aria-labelledby="home-heading" role="region">
-      <h1 id="home-heading">Readable Journal</h1>
-      <p class="lead large">A space for writers to create and share — accessible, readable, and privacy-minded.</p>
-      <p><a class="cta" href="#journal">Start Writing</a></p>
-    </section>
-
-    <!-- ABOUT (page 2) -->
-    <section id="about" class="panel" aria-labelledby="about-heading" role="region">
-      <h2 id="about-heading">About Readable Journal</h2>
-      <p>Readable Journal is designed with clarity and accessibility in mind. We follow readable font sizes, clear color contrast, and keyboard-first navigation.</p>
-
-      <h3>Design &amp; Accessibility Goals — Readable Journal</h3>
-      <ul>
-        <li>Readable base text (≥ 16px; configured at 18px).</li>
-        <li>Line-height set to at least 1.6 for comfortable reading.</li>
-        <li>All images contain descriptive alt text including the phrase "Readable Journal".</li>
-        <li>Navigation and forms usable by keyboard only.</li>
-      </ul>
-    </section>
-
-    <!-- JOURNAL (page 3) -->
-    <section id="journal" class="panel" aria-labelledby="journal-heading" role="region">
-      <h2 id="journal-heading">Start Writing — Readable Journal</h2>
-      <p class="intro">Your entries are saved locally in your browser (localStorage). This demo respects user data residency — no server upload by default.</p>
-
-      <label for="journalInput" class="visually-hidden">Write your thoughts</label>
-      <textarea id="journalInput" name="journalInput" placeholder="Write your thoughts..." aria-describedby="journalNote" rows="8"></textarea>
-      <div id="journalNote" class="hint">Tip: Use keyboard shortcuts. Entries are only stored on this device.</div>
-
-      <div class="controls">
-        <button id="saveBtn" class="btn">Save Entry</button>
-        <button id="clearAllBtn" class="btn secondary">Clear All</button>
+    <!-- HOME -->
+    <section id="home" class="panel hero" aria-labelledby="home-heading" role="region">
+      <div class="panel-inner">
+        <h1 id="home-heading">Readable Journal</h1>
+        <p class="lead large">A space for writers to create and share — accessible, readable, and privacy-minded.</p>
+        <p><a class="cta" href="#journal">Start Writing</a></p>
       </div>
-
-      <div id="messages" role="status" aria-live="polite" class="visually-hidden"></div>
-
-      <h3>Entries</h3>
-      <div class="entry-list" id="entryList" aria-live="polite"></div>
     </section>
 
-    <!-- RESOURCES (page 4) -->
+    <!-- ABOUT -->
+    <section id="about" class="panel" aria-labelledby="about-heading" role="region">
+      <div class="panel-inner grid-two">
+        <div>
+          <h2 id="about-heading">About Readable Journal</h2>
+          <p>Readable Journal is designed with clarity and accessibility in mind: readable font sizes, clear color contrast, keyboard-first navigation, and privacy-first defaults.</p>
+
+          <h3>Design &amp; Accessibility Goals</h3>
+          <ul>
+            <li>Readable base text (≥ 16px; configured at 18px).</li>
+            <li>Line-height set to at least 1.6 for comfortable reading.</li>
+            <li>All images include descriptive alt text containing the site name.</li>
+            <li>Navigation and forms fully usable by keyboard alone.</li>
+          </ul>
+        </div>
+
+        <!-- Image 2: woman working at computer (About) -->
+        <figure class="media" aria-hidden="false">
+          <img src="/mnt/data/Image.jpg"
+               alt="Readable Journal — professional at computer working on writing and productivity" width="800" height="450">
+          <figcaption class="caption">Professional writing and productivity — image source (uploaded). <small>(iStock fallback: https://www.istockphoto.com/...)</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- JOURNAL -->
+    <section id="journal" class="panel" aria-labelledby="journal-heading" role="region">
+      <div class="panel-inner grid-two">
+        <div>
+          <h2 id="journal-heading">Start Writing — Readable Journal</h2>
+          <p class="intro">Entries are saved locally in your browser (localStorage). This demo respects user data residency — no server upload by default.</p>
+
+          <label for="journalInput" class="visually-hidden">Write your thoughts</label>
+          <textarea id="journalInput" name="journalInput" placeholder="Write your thoughts..." aria-describedby="journalNote" rows="8"></textarea>
+          <div id="journalNote" class="hint">Tip: Use keyboard shortcuts. Entries are stored only on this device.</div>
+
+          <div class="controls">
+            <button id="saveBtn" class="btn primary">Save Entry</button>
+            <button id="clearAllBtn" class="btn secondary">Clear All</button>
+          </div>
+
+          <div id="messages" role="status" aria-live="polite" class="visually-hidden"></div>
+
+          <h3>Entries</h3>
+          <div class="entry-list" id="entryList" aria-live="polite"></div>
+        </div>
+
+        <!-- Image 1: woman journaling (Journal) -->
+        <figure class="media">
+          <img src="/mnt/data/edd082be-1db5-46f7-8960-cd6aa5507708.png"
+               alt="Readable Journal — person writing in a notebook by a window, journaling moment" width="800" height="533">
+          <figcaption class="caption">Journaling — reflect and write. <small>(iStock fallback: https://www.istockphoto.com/photo/young-african-american-woman-writing-notes-gm1463874453-496752271)</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
     <section id="resources" class="panel" aria-labelledby="resources-heading" role="region">
       <h2 id="resources-heading">Resources & Media — Readable Journal</h2>
+      <p>Below are sample images and links used for layout and accessibility testing. Filenames and alt text include the site keyword.</p>
 
-      <p>Below are sample images used for layout and accessibility testing. Filenames and alt text include the site keyword.</p>
+      <div class="image-grid" role="list">
+        <figure class="media" role="listitem">
+          <img src="/mnt/data/Image%201.jpg"
+               alt="Readable Journal — illustration of a laptop and writer workspace for resources and templates" width="800" height="450">
+          <figcaption class="caption">Workspace illustration and templates. <small>(iStock fallback: vector illustration)</small></figcaption>
+        </figure>
 
-      <ul class="image-grid" aria-hidden="false">
-        <li>
-          <img src="img/readable-journal-screenshot-1.jpg" alt="Readable Journal — screenshot of the writing area" width="400" height="250">
-          <p class="caption">Readable Journal — writing area.</p>
-        </li>
-        <li>
-          <img src="img/readable-journal-screenshot-2.jpg" alt="Readable Journal — entries list example" width="400" height="250">
-          <p class="caption">Readable Journal — entries list.</p>
-        </li>
-        <li>
-          <img src="img/readable-journal-screenshot-3.jpg" alt="Readable Journal — accessibility features overview" width="400" height="250">
-          <p class="caption">Readable Journal — accessibility features.</p>
-        </li>
-      </ul>
+        <figure class="media" role="listitem">
+          <img src="/mnt/data/edd082be-1db5-46f7-8960-cd6aa5507708.png"
+               alt="Readable Journal logo (small preview)" width="400" height="132">
+          <figcaption class="caption">Readable Journal logo (preview).</figcaption>
+        </figure>
 
-      <h3>Examples & Links</h3>
+        <figure class="media" role="listitem">
+          <img src="/mnt/data/Image.jpg"
+               alt="Readable Journal — user at computer (preview)" width="400" height="225">
+          <figcaption class="caption">User productivity preview.</figcaption>
+        </figure>
+      </div>
+
+      <h3>Helpful Links</h3>
       <ol>
         <li><a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">WAI — Web Accessibility Initiative</a></li>
         <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C HTML validator</a></li>
         <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer">W3C CSS validator</a></li>
       </ol>
 
-      <h3>Sample contact info table</h3>
+      <h3>Sample contact info</h3>
       <table aria-describedby="contactTableDesc">
         <caption id="contactTableDesc">Sample contact channels for Readable Journal</caption>
         <thead>
-          <tr>
-            <th scope="col">Channel</th>
-            <th scope="col">Address</th>
-          </tr>
+          <tr><th scope="col">Channel</th><th scope="col">Address</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Email</td>
-            <td><a href="mailto:support@readable.com">support@readable.com</a></td>
-          </tr>
-          <tr>
-            <td>Support form</td>
-            <td><a href="#contact">Open contact form below</a></td>
-          </tr>
+          <tr><td>Email</td><td><a href="mailto:support@readable.com">support@readable.com</a></td></tr>
+          <tr><td>Support form</td><td><a href="#contact">Open contact form below</a></td></tr>
         </tbody>
       </table>
     </section>
 
-    <!-- CONTACT (page 5) -->
+    <!-- CONTACT -->
     <section id="contact" class="panel" aria-labelledby="contact-heading" role="region">
       <h2 id="contact-heading">Contact — Readable Journal</h2>
-      <p>Have questions? Reach us using the form below or email us at <strong><a href="mailto:support@readable.com">support@readable.com</a></strong>.</p>
+      <p>Have questions? Reach us using the form below or email <strong><a href="mailto:support@readable.com">support@readable.com</a></strong>.</p>
 
       <form id="contactForm" action="#" novalidate aria-describedby="formInstructions">
         <div id="formInstructions" class="visually-hidden">All fields required. Validation messages appear under fields.</div>
@@ -175,16 +193,15 @@
         </div>
 
         <div id="formSuccess" role="status" aria-live="polite" class="form-success" hidden>
-          Thank you — your message has been received (this demo echoes to local storage only).
+          Thank you — your message has been received (demo stores locally).
         </div>
       </form>
     </section>
 
-    <!-- Hidden simple sitemap & legal anchors to satisfy footer links -->
-    <section id="privacy" class="panel visually-hidden" aria-hidden="true"><h2>Privacy</h2><p>Sample privacy info for demo — no data is sent to servers by default.</p></section>
-    <section id="terms" class="panel visually-hidden" aria-hidden="true"><h2>Terms</h2><p>Sample terms of use for demo site.</p></section>
-    <section id="sitemap" class="panel visually-hidden" aria-hidden="true"><h2>Sitemap</h2><p>Site map (this is a single-page demo structured for grading).</p></section>
-
+    <!-- Hidden anchors to satisfy footer links -->
+    <section id="privacy" class="panel visually-hidden" aria-hidden="true"><h2>Privacy</h2><p>Privacy (demo): no server storage by default.</p></section>
+    <section id="terms" class="panel visually-hidden" aria-hidden="true"><h2>Terms</h2><p>Sample terms for demo.</p></section>
+    <section id="sitemap" class="panel visually-hidden" aria-hidden="true"><h2>Sitemap</h2><p>Single page demo sitemap.</p></section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
@@ -207,16 +224,14 @@
   </footer>
 
   <script>
-    // -------------------------
-    // Small progressive JS to improve a11y + behavior
-    // -------------------------
+    // Update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Mobile nav toggle
     const navToggle = document.getElementById('navToggle');
     const primaryNav = document.getElementById('primaryNav');
     navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
       navToggle.setAttribute('aria-expanded', (!expanded).toString());
       primaryNav.classList.toggle('open');
     });
@@ -227,27 +242,26 @@
       }
     });
 
-    // Smooth in-page navigation + focus management for keyboard users
+    // Smooth scrolling + focus management for in-page links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
-        const targetId = a.getAttribute('href').slice(1);
-        const target = document.getElementById(targetId);
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        const id = href.slice(1);
+        const target = document.getElementById(id);
         if (target) {
           e.preventDefault();
           target.scrollIntoView({behavior:'smooth', block:'start'});
-          // move focus to the first focusable element or the section itself
-          setTimeout(() => {
-            target.setAttribute('tabindex','-1');
-            target.focus();
-          }, 350);
-          // close mobile nav if open
+          // ensure the target can receive focus
+          target.setAttribute('tabindex', '-1');
+          setTimeout(() => target.focus(), 350);
           primaryNav.classList.remove('open');
           navToggle.setAttribute('aria-expanded', 'false');
         }
       });
     });
 
-    // Journal: save/load entries (improved)
+    // Journal: save/load entries (localStorage)
     function loadEntries() {
       const container = document.getElementById("entryList");
       container.innerHTML = "";
@@ -289,8 +303,6 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       loadEntries();
-      const input = document.getElementById("journalInput");
-      if (input) input.style.fontSize = "inherit";
     });
 
     const saveBtn = document.getElementById('saveBtn');
@@ -320,7 +332,7 @@
       loadEntries();
     });
 
-    // Contact form validation (immediate field-level error + prevent submit)
+    // Contact form validation
     const form = document.getElementById('contactForm');
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
@@ -341,7 +353,6 @@
       field.removeAttribute('aria-invalid');
     }
 
-    // Validate on blur so user sees errors before submit
     [nameField, emailField, messageField].forEach(f => {
       f.addEventListener('blur', () => {
         validateField(f);
@@ -401,7 +412,7 @@
       setTimeout(() => formSuccess.hidden = true, 5000);
     });
 
-    // Make sure keyboard focus outlines are visible
+    // Show focus outlines for keyboard users only
     (function detectKeyboardNav() {
       function handleFirstTab(e) {
         if (e.key === 'Tab') {
@@ -411,7 +422,7 @@
       }
       window.addEventListener('keydown', handleFirstTab);
     })();
-
   </script>
 </body>
 </html>
+
